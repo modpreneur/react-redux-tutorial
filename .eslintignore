@@ -1,0 +1,6 @@
+webpack.config.js
+dist
+dist/*
+env
+env/*
+node_modules

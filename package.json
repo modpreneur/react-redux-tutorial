@@ -1,0 +1,50 @@
+{
+  "name": "react-redux-tutorial",
+  "version": "1.0.0",
+  "description": "React learning repository for inner purposes",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modpreneur/react-redux-tutorial.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "js"
+  ],
+  "author": "fiser@modpreneur.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/modpreneur/react-redux-tutorial/issues"
+  },
+  "homepage": "https://github.com/modpreneur/react-redux-tutorial#readme",
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.10.0",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  }
+}
