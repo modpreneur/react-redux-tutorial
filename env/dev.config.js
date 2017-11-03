@@ -8,7 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const JS_ROOT = path.resolve(__dirname, '../'),
     CONFIG_PATH = path.join(JS_ROOT, 'parameters.json');
-
+let server_domain = 'localhost';
+let server_port = 3001;
 let server_path = 'http://localhost:3001/';
 if (fs.existsSync(CONFIG_PATH)){
     let config = JSON.parse(fs.readFileSync(CONFIG_PATH)),
@@ -17,10 +18,13 @@ if (fs.existsSync(CONFIG_PATH)){
     if(domain[domain.length - 1] === '/') {
         domain = domain.substring(0, domain.length - 1);
     }
-    server_path = `${domain}:${config['dev-server-port']}/`
+    server_path = `${domain}:${config['dev-server-port']}`
+
+    server_domain = domain;
+    server_port = Number(config['dev-server-port']);
 }
 
-const SERVER_PATH = server_path;
+const SERVER_PATH = `${server_path}/`;
 
 
 // preparation
@@ -56,9 +60,9 @@ module.exports = {
         inline: true,
         contentBase: path.resolve(__dirname, '../dist'),
         publicPath: '/',
-        port: 3001,
+        port: server_port,
         host: '0.0.0.0',
-        public: 'localhost:3001',
+        public: server_domain,
         headers: {
             'Access-Control-Allow-Origin': '*'
         }
