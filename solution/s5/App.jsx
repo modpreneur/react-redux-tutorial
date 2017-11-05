@@ -6,6 +6,14 @@ import MyButton from './MyButton.jsx';
 
 export default class App extends React.Component {
 
+    static propTypes = {
+        name: PropTypes.string
+    };
+
+    static defaultProps = {
+        name: 'world'
+    };
+
     constructor(props){
         super(props);
 
@@ -51,11 +59,3 @@ export default class App extends React.Component {
         );
     }
 }
-
-App.propTypes = {
-    name: PropTypes.string
-};
-
-App.defaultProps = {
-    name: 'world'
-};

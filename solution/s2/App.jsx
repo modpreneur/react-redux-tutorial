@@ -5,6 +5,14 @@ import PropTypes from 'prop-types';
 
 export default class App extends React.Component {
 
+    static propTypes = {
+        name: PropTypes.string
+    };
+
+    static defaultProps = {
+        name: 'world'
+    };
+
     /**
      * Most important method
      * @returns {XML}

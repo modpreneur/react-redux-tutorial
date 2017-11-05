@@ -6,6 +6,18 @@ import MyButton from './MyButton.jsx';
 
 
 export default class AddTodoComponent extends React.Component {
+    static propTypes = {
+        onAdd: PropTypes.func,
+        wrapperProps: PropTypes.object,
+        buttonText: PropTypes.string
+    };
+
+    static defaultProps = {
+        onAdd: () => {},
+        wrapperProps: {},
+        buttonText: ''
+    };
+
     constructor(props){
         super(props);
 
@@ -30,15 +42,3 @@ export default class AddTodoComponent extends React.Component {
         );
     }
 }
-
-AddTodoComponent.defaultProps = {
-    onAdd: () => {},
-    wrapperProps: {},
-    buttonText: ''
-};
-
-AddTodoComponent.propTypes = {
-    onAdd: PropTypes.func,
-    wrapperProps: PropTypes.object,
-    buttonText: PropTypes.string
-};
